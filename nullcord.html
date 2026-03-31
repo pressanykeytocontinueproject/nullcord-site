@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>nullcord</title>
+
+<style>
+:root {
+    --bg: #06080d;
+    --card: rgba(18, 24, 33, 0.85);
+    --accent: #4da3ff;
+    --accent2: #6ef3ff;
+    --text: #e6edf3;
+    --muted: #7a8599;
+    --border: rgba(255,255,255,0.1);
+}
+
+* {margin:0;padding:0;box-sizing:border-box;font-family:"Segoe UI",sans-serif;}
+
+body {
+    background: radial-gradient(circle at top, #0b1220, #06080d);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+header {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 56px;
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.hero h2 {font-size: 34px;}
+.hero p {margin-top:15px;color:var(--muted);line-height:1.6;}
+
+.section {
+    max-width:1100px;
+    margin:80px auto;
+    padding:0 20px;
+}
+
+.section-title {
+    text-align:center;
+    margin-bottom:40px;
+    font-size:22px;
+    color:var(--muted);
+    letter-spacing:1px;
+}
+
+.grid {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.card {
+    background:var(--card);
+    border:1px solid var(--border);
+    padding:25px;
+    border-radius:16px;
+    backdrop-filter: blur(12px);
+    transition:0.3s;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    flex: 1 1 250px;
+    max-width: 250px;
+}
+
+.card:hover {transform:translateY(-6px);border-color:rgba(77,163,255,0.3);box-shadow:0 12px 28px rgba(0,0,0,0.4);} 
+
+.card h3 {margin-bottom:12px;font-size:20px;}
+.card p {color:var(--muted);font-size:14px;line-height:1.6;}
+
+.download-box {
+    text-align:center;
+    margin-top:60px;
+    padding:50px;
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:18px;
+}
+
+.btn {
+    display:inline-block;
+    margin-top:30px;
+    padding:16px 36px;
+    border-radius:12px;
+    background:linear-gradient(90deg,var(--accent),var(--accent2));
+    color:#000;
+    font-weight:600;
+    text-decoration:none;
+    transition:0.2s;
+}
+
+.btn:hover {transform:translateY(-2px);opacity:0.9;}
+
+.footer {
+    text-align:center;
+    padding:40px;
+    color:var(--muted);
+    font-size:13px;
+}
+
+body::before {
+    content:"";
+    position:fixed;
+    width:200%;
+    height:200%;
+    background: radial-gradient(circle, rgba(77,163,255,0.05), transparent 60%);
+    animation: move 20s linear infinite;
+}
+
+@keyframes move {
+    from {transform:translate(-25%, -25%);} 
+    to {transform:translate(0%, 0%);} 
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <h1>nullcord</h1>
+    <div class="subtitle">NO IDENTITY • NO TRACE • NO COMPROMISE</div>
+</header>
+
+<section class="hero">
+    <h2>Communication Without Exposure</h2>
+    <p>
+        nullcord is a zero-knowledge, encrypted communication system designed for absolute privacy.
+        No logs, no identities, no traceable metadata — just secure, direct communication between your machines.
+    </p>
+</section>
+
+<section class="section">
+    <div class="section-title">Core Capabilities</div>
+    <div class="grid">
+        <div class="card"><h3>Zero Knowledge</h3><p>Servers relay encrypted data only. No visibility into users, messages, or relationships.</p></div>
+        <div class="card"><h3>Multi-Hop Routing</h3><p>Traffic is routed through layered relays to prevent origin tracing and network correlation.</p></div>
+        <div class="card"><h3>No Storage</h3><p>No logs, no disk writes, no persistence. All data exists only in volatile memory.</p></div>
+        <div class="card"><h3>Ephemeral Identity</h3><p>Rotating identifiers and key resets eliminate long-term tracking.</p></div>
+        <div class="card"><h3>Secure Transfer</h3><p>Encrypted file transfer with integrity validation and zero exposure.</p></div>
+        <div class="card"><h3>Minimal Core</h3><p>Lightweight raw socket architecture for maximum performance and control.</p></div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="section-title">Why Choose nullcord</div>
+    <div class="grid">
+        <div class="card"><h3>Privacy First by Design</h3><p>Unlike many communication platforms, nullcord is engineered from the ground up with privacy as a core principle, not an added feature.</p></div>
+        <div class="card"><h3>No Data Dependency</h3><p>Many services rely on stored user data to function. nullcord operates without persistent storage, reducing exposure risks entirely.</p></div>
+        <div class="card"><h3>Minimal Attack Surface</h3><p>With a lightweight, custom-built protocol and no unnecessary components, nullcord minimizes potential vulnerabilities.</p></div>
+        <div class="card"><h3>User-Controlled Identity</h3><p>Your identity is generated and controlled locally. No central authority manages or defines who you are.</p></div>
+        <div class="card"><h3>Transparent Architecture</h3><p>Built with simplicity and auditability in mind, making it easier to understand how your data is handled.</p></div>
+        <div class="card"><h3>Designed for Sensitive Use</h3><p>Ideal for scenarios where confidentiality matters, without relying on trust in external systems.</p></div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="download-box">
+        <h2>Get Started</h2>
+        <p style="margin-top:10px;color:var(--muted)">Download the latest build and launch the setup wizard.</p>
+        <a href="#" class="btn">Download Now</a>
+    </div>
+</section>
+
+<div class="footer">
+    nullcord © 2026 — built for privacy-first communication
+</div>
+
+</body>
+</html>
